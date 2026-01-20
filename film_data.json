@@ -1,0 +1,56 @@
+[
+  {
+    "titolo": "Il Padrino",
+    "genere": "drammatico",
+    "anno": 1972,
+    "trama": "La storia di una potente famiglia mafiosa italo-americana. Crimine organizzato, onore e tradimenti a New York."
+  },
+  {
+    "titolo": "Quei bravi ragazzi",
+    "genere": "drammatico",
+    "anno": 1990,
+    "trama": "La vita di Henry Hill e la sua carriera nella mafia. Rapine, lusso sfrenato e la violenza della vita criminale."
+  },
+  {
+    "titolo": "Scarface",
+    "genere": "drammatico",
+    "anno": 1983,
+    "trama": "Un immigrato cubano diventa un potente boss della droga a Miami. Ascesa e caduta violenta in un impero di cocaina."
+  },
+  {
+    "titolo": "Alla ricerca di Nemo",
+    "genere": "animazione",
+    "anno": 2003,
+    "trama": "Un pesce pagliaccio sfida i pericoli del vasto mare aperto e dell'oceano per ritrovare suo figlio."
+  },
+  {
+    "titolo": "Toy Story",
+    "genere": "animazione",
+    "anno": 1995,
+    "trama": "I giocattoli prendono vita quando nessuno guarda. Un cowboy geloso cerca di liberarsi di uno spaceman tecnologico."
+  },
+  {
+    "titolo": "Shrek",
+    "genere": "animazione",
+    "anno": 2001,
+    "trama": "Un orco scontroso deve salvare una principessa per recuperare la sua palude. Viaggio fiabesco con un asino parlante."
+  },
+  {
+    "titolo": "Matrix",
+    "genere": "fantascienza",
+    "anno": 1999,
+    "trama": "Un hacker scopre che il mondo è una simulazione virtuale gestita dalle macchine. Pillola rossa o pillola blu? Distopia tecnologica."
+  },
+  {
+    "titolo": "Star Wars",
+    "genere": "fantascienza",
+    "anno": 1977,
+    "trama": "Guerre stellari ambientate in una galassia lontana. Astronavi combattono nello spazio profondo usando spade laser e la forza."
+  },
+  {
+    "titolo": "Blade Runner",
+    "genere": "fantascienza",
+    "anno": 1982,
+    "trama": "In un futuro cyberpunk, un poliziotto dà la caccia a replicanti umanoidi ribelli. Domande sull'intelligenza artificiale e l'anima."
+  }
+]

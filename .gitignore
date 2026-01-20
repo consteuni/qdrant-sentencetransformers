@@ -9,3 +9,12 @@ wheels/
 # Virtual environments
 .venv
 .env/
+
+# Qdrant local storage (vector DB persisted on disk)
+qdrant_db/
+
+# Common model/cache folders (if configured inside repo)
+.cache/
+models/
+sentence_transformers_cache/
+transformers_cache/
