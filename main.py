@@ -38,8 +38,8 @@ def trova_film_da_titolo(titolo_cercato, lista_film):
 
 
 def main():
-    print("📂 Connessione al database locale...")
-    client = QdrantClient(path="./qdrant_db")
+    print("📂 Connessione al server Qdrant su http://localhost:6333 ...")
+    client = QdrantClient(url="http://localhost:6333")
 
     nome_collezione = "film_persistenti"
     nome_modello = "paraphrase-multilingual-mpnet-base-v2"
@@ -55,7 +55,13 @@ def main():
         print("❌ 'film_data.json' non è valido. Controlla la sintassi JSON.")
         return
 
-    if not client.collection_exists(collection_name=nome_collezione):
+    try:
+        esiste = client.collection_exists(collection_name=nome_collezione)
+    except Exception:
+        print("❌ Impossibile connettersi a Qdrant su http://localhost:6333. Avvia il container Docker e riprova.")
+        return
+
+    if not esiste:
         print("⚠️ Collezione non trovata. Inizializzazione primo avvio...")
         print(f"📥 Caricamento modello AI: {nome_modello}...")
         encoder = SentenceTransformer(nome_modello)
@@ -72,9 +78,9 @@ def main():
             punti.append(PointStruct(id=str(uuid.uuid4()), vector=vettore, payload=film))
 
         client.upsert(collection_name=nome_collezione, points=punti)
-        print("✅ Database creato e salvato su disco!")
+        print("✅ Collezione creata su Qdrant!")
     else:
-        print("✅ Database trovato su disco! Salto l'indicizzazione.")
+        print("✅ Collezione trovata su Qdrant! Salto l'indicizzazione.")
 
     if encoder is None:
         print("📥 Caricamento modello AI per la ricerca...")
@@ -84,7 +90,7 @@ def main():
 
     print("\n" + "-" * 50)
     print("🤖 CINE-BOT PERMANENTE")
-    print("I tuoi dati sono salvi nella cartella 'qdrant_db'")
+    print("Dati persistenti su Qdrant (volume Docker se montato)")
     print("-" * 50)
 
     print("\n" + "-" * 50)
